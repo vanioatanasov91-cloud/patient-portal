@@ -1,11 +1,11 @@
-# Patient Portal — Fast Track 16
+# Patient Portal — Fast Track17
 
-За вече работещия Windows портал15 без Docker изтегли **[ClamAV добавката](downloads/PatientPortal_ClamAV_Windows_v16.zip)**, извлечи целия ZIP в нова папка и стартирай **START_CLAMAV_WINDOWS.cmd**. Остави портала да работи. Добавката не чете/променя неговите данни, потребители и настройки. Инструкции: [CLAMAV_WINDOWS_BG.md](PatientPortal-FastTrack-v16/CLAMAV_WINDOWS_BG.md).
+Потребителят потвърди Windows15+ClamAV16 функционалния PDF сценарий: legacy scan/preview, ново качване/публикуване, owner view/download и отказ за друг пациент. Това е ръчна проверка; точният обхват е в [WINDOWS_ACCEPTANCE_BG.md](PatientPortal-FastTrack-v17/WINDOWS_ACCEPTANCE_BG.md). **HOLD / NO-GO остава.**
 
-Малкият пакет е 16304 bytes с6 text/source файла. SHA256: `a13529acbcaf0f80eeb7a605055486ea68b79cc3fe53a269ee49202cb6d303dd`. При първото пускане изтегля и проверява официалния ClamAV1.5.4 Windows64 пакет (около226MB) и подписаните бази. Готовността се показва след реален PING/clean/EICAR/48h preflight на целевия компютър. Няма Docker/Windows service/firewall/registry/ACL/global PATH промени. Само127.0.0.1:3310 и собствена LOCALAPPDATA папка.
+Следва **криптиран архив и отделно пробно възстановяване**. [Изтегли обновения проект17](downloads/PatientPortal_FastTrack_v17_Codex.zip), извлечи целия ZIP в нова папка, спри собствения портал8000 с Ctrl+C и стартирай **BACKUP_WINDOWS.cmd**. Новата парола за архива се въвежда локално и скрито, поне16 знака. Ползват се съществуващите FastTrack15 venv/data; няма ново init/reset или преинсталиране на ClamAV.
 
-Пълният обновен проект е **[Fast Track16](downloads/PatientPortal_FastTrack_v16_Codex.zip)**: 326006 bytes,126 source/report файла, SHA256 `2b4e0b101aa3a4282f5adaaa0a0e549ca5457412419b8ba8f48728afc1b79628`. Не е нужно да сменяш работещия портал15 за тази scanner стъпка. Старите версии14/15 и техните ZIP са запазени отделно.
+**RESTORE_TEST_WINDOWS.cmd** възстановява последния собствен архив в нова уникална папка. **START_RESTORED_WINDOWS.cmd** отваря възстановеното копие наlocalhost8001. Оригиналната data папка се запазва. [Точни стъпки](PatientPortal-FastTrack-v17/WINDOWS_BACKUP_BG.md).
 
-**18/18 regression групи PASS**; новите12 случая допълват запазените предишни тестове. Официалният Windows ZIP е реално проверен/извлечен в Linux. Native Windows ClamAV execution и целевото PDF качване остават да се потвърдят. [Действителен отчет](PatientPortal-FastTrack-v16/TEST_REPORT_BG.md).
+18/18 regression групи PASS;15 оригинални backup проверки и11 нови desktop/drill случая. Поправено е изричното затваряне на readonly SQLite handles при config validation, без промяна на schema/crypto формата. Native Windows backup/getpass/drill предстои да се потвърди; Linux тестовете не го удостоверяват. [Действителен отчет](PatientPortal-FastTrack-v17/TEST_REPORT_BG.md).
 
-В доставените source/ZIP няма vendor EXE/DLL/CVD, пароли, PDF, ключове или база на портала. **Само синтетични данни. HOLD / NO-GO остава до независима проверка.**
+Пакетът е 345387 bytes с135 source/report файла. SHA256: `4286401050f2c0a2ad90533b15aed571fa267cd758879bdb727d07b88ff05947`. В repository/ZIP няма .ppbk, пароли, DB/PDF, ключове, venv, ClamAV EXE/DLL/CVD. Предишните source версии14/15/16 и техните архиви са запазени отделно. Няма Windows service/firewall/registry/ACL/PATH промени. Само синтетични данни; реална употреба изисква независима проверка.

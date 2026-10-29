@@ -1,0 +1,10 @@
+{
+  "mode": "PIP DRY RUN / WIN_AMD64 / CPYTHON 3.13 / NO INSTALL",
+  "status": "PASS/HOLD",
+  "packages": 31,
+  "all_wheels": true,
+  "requirements_sha256": "af94f9bca23fd5bd660251e853360fd35c43dbf7b25a4f56a87a442bdc035edc",
+  "native_windows_executed": false,
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false
+}

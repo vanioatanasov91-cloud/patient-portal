@@ -1,0 +1,11 @@
+{
+  "mode": "LOCAL LINUX SYNTHETIC PILOT",
+  "supervisor_lock_held": true,
+  "scanner_fresh": true,
+  "http_ready": true,
+  "ready": true,
+  "url": "http://127.0.0.1:18080/login",
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "timestamp_utc": "2026-10-29T07:23:17.319622+00:00"
+}

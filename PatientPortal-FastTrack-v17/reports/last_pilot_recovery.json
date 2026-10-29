@@ -1,0 +1,13 @@
+{
+  "mode": "OWNED SYNTHETIC PILOT SCANNER OUTAGE",
+  "started_utc": "2026-10-29T07:21:18.829866+00:00",
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "outage_stops_owned_http": true,
+  "supervisor_lock_released": true,
+  "owned_container_removed": true,
+  "candidate_data_preserved": true,
+  "status": "PASS/HOLD",
+  "finished_utc": "2026-10-29T07:21:21.216797+00:00",
+  "restart_ready": true
+}

@@ -1,0 +1,61 @@
+{
+  "mode": "OWNED LOOPBACK / GENERATED SYNTHETIC ONLY",
+  "workers": 2,
+  "global_pdf_slots": 2,
+  "upload_slots": 1,
+  "boundary_bytes": {
+    "upload_accepted": 15728640,
+    "upload_rejected": 15728641,
+    "legacy_accepted": 67108864,
+    "legacy_rejected": 67108865
+  },
+  "large_wave_status_counts": {
+    "200": 2,
+    "503": 6
+  },
+  "soak": {
+    "clients": 8,
+    "requested_seconds": 30,
+    "elapsed_seconds": 30.027,
+    "status_counts": {
+      "503": 2407,
+      "200": 805
+    },
+    "latency_ms_by_status": {
+      "200": {
+        "count": 805,
+        "median": 27.71,
+        "p95": 33.61,
+        "max": 107.45
+      },
+      "503": {
+        "count": 2407,
+        "median": 21.32,
+        "p95": 25.65,
+        "max": 91.24
+      }
+    }
+  },
+  "resources": {
+    "sampled_aggregate_worker_peak_rss_bytes": 282865664,
+    "per_worker_peak_rss_bytes": [
+      138514432,
+      144351232
+    ],
+    "aggregate_rss_budget_bytes": 1073741824,
+    "worker_cpu_seconds": 7.74,
+    "worker_cpu_budget_seconds": 80,
+    "scope": "Linux /proc workers only, sampled; excludes parent, clients, scanner, proxy and kernel buffers"
+  },
+  "checks_passed": 29,
+  "elapsed_seconds": 32.514,
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "limitations": [
+    "single-host local filesystem prototype, not NFS/SMB or multi-host admission",
+    "scanner is mocked; legacy attestations are synthetic fixtures",
+    "30s default bounded soak is not an hours-long capacity or production certification",
+    "RSS is sampled, not an enforced OS memory ceiling; Windows unverified",
+    "no real reverse proxy, rate limit, TLS or production install was changed"
+  ]
+}

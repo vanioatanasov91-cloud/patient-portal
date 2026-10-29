@@ -1,0 +1,22 @@
+{
+  "mode": "REAL CLAMAV / OWNED LINUX DOCKER LAB / SYNTHETIC ONLY",
+  "image": "clamav/clamav@sha256:bda39705e291105049c3936e2803ac90b955172af8030f94f05dce1252df6c6d",
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "status": "UPDATE_BLOCKED/HOLD",
+  "started_utc": "2026-10-29T04:13:54.352394+00:00",
+  "preflight_executed": false,
+  "signature_update": {
+    "requested": true,
+    "status": "BLOCKED/HOLD",
+    "stage": "connectivity",
+    "reason": "PROXY_DENIED",
+    "http_status": 403,
+    "updated": false
+  },
+  "signature_age_passed": false,
+  "checks": [],
+  "functional_passed": 0,
+  "cleanup_completed": true,
+  "finished_utc": "2026-10-29T04:13:54.378295+00:00"
+}
