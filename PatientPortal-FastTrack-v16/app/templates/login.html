@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Вход{% endblock %}
+{% block content %}
+<div class="auth-wrapper">
+  <section class="auth-hero">
+    <span class="eyebrow">ОБРАЗНА ДИАГНОСТИКА</span>
+    <h1>Вашите резултати.<br><span>На едно сигурно място.</span></h1>
+    <p>Влезте с потребителското име и паролата, които сте получили от медицинския център, за да изтеглите разчитането на Вашето изследване.</p>
+    <div class="hero-note"><span class="feature-icon">✓</span> Достъп само до Вашите документи</div>
+    <div class="hero-note"><span class="feature-icon">✓</span> PDF формат, удобен за изтегляне</div>
+  </section>
+  <section class="panel login-panel">
+    <span class="eyebrow">ПАЦИЕНТСКИ ПОРТАЛ</span>
+    <h2>Вход в профила</h2>
+    <p class="muted">Въведете предоставените Ви данни.</p>
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+    <form action="/login" method="post" class="form-stack">
+      <input type="hidden" name="login_token" value="{{login_token}}">
+      <label>Потребителско име<input name="username" type="text" autocomplete="username" autofocus required placeholder="ЕГН или ЛНЧ (10 цифри)" maxlength="80"></label>
+      <label>Парола<input name="password" type="password" autocomplete="current-password" required placeholder="Въведете паролата си"></label>
+      <label>Код от приложение за служители (ако е активиран)<input name="mfa_code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" placeholder="6 цифри"></label>
+      <button type="submit" class="button primary full">Вход</button>
+    </form>
+    <div class="fineprint">При загубени данни за достъп се свържете лично с медицинския център. Не изпращайте паролата си на други хора.</div>
+  </section>
+</div>
+{% endblock %}

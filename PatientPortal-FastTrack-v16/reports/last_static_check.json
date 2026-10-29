@@ -1,0 +1,670 @@
+{
+  "name": "PatientPortal FastTrack static preflight",
+  "timestamp_utc": "2026-10-29T18:34:57.276451+00:00",
+  "pass": 165,
+  "fail": 0,
+  "checks": [
+    {
+      "check": "Curated source manifest present",
+      "ok": true
+    },
+    {
+      "check": "SHA256: .gitignore",
+      "ok": true
+    },
+    {
+      "check": "SHA256: AGENTS.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: ANALYSIS_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: CANDIDATE_BACKUP_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: CANDIDATE_START_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: CHANGELOG_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: CHECK_CLAMAV_WINDOWS.cmd",
+      "ok": true
+    },
+    {
+      "check": "SHA256: CHECK_WINDOWS.cmd",
+      "ok": true
+    },
+    {
+      "check": "SHA256: CLAMAV_OPERATIONS_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: CLAMAV_UPDATE_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: CLAMAV_WINDOWS_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: CODEX_START_HERE_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: LEGACY_AV_DESIGN_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: NEXT_SPRINT_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: PILOT_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: PILOT_REPORT_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: README_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: REAL_CLAMAV_REPORT_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: RESOURCE_POLICY_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: RUN_ALL_SAFE_TESTS.ps1",
+      "ok": true
+    },
+    {
+      "check": "SHA256: SCANNER_COMPONENT_SHA256.txt",
+      "ok": true
+    },
+    {
+      "check": "SHA256: SHARED_ADMISSION_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: START_CLAMAV_WINDOWS.cmd",
+      "ok": true
+    },
+    {
+      "check": "SHA256: START_WINDOWS.cmd",
+      "ok": true
+    },
+    {
+      "check": "SHA256: TEST_ENV_VERSIONS.txt",
+      "ok": true
+    },
+    {
+      "check": "SHA256: TEST_REPORT_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: WINDOWS_START_BG.md",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/candidate_backup.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/candidate_entry.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/candidate_runtime.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/legacy_pdf_policy.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/manage.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/pilot_entry.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/portal.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/production_check.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/requirements.txt",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/scanner_readiness.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/secure_backup.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/shared_pdf_admission.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/static/portal-ui.js",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/static/style.css",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/audit.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/base.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/change_password.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/credentials.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/detail.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/edit_patient.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/error.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/login.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/new_patient.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/patient.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/reports.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/settings.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: app/templates/staff.html",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/dr/stage612_backup_helper_FAKE_ONLY.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/dr/stage612_fake_dr_test.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft10/test_candidate_workflow.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft11/test_candidate_backup.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft12/test_scanner_operations.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft14/test_pilot_workflow.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft15/test_desktop_start.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft16/test_windows_clamav.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft8/fixtures.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft8/test_clamd_preflight.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft8/test_legacy_policy.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft9/http_fixture.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft9/test_admission_ingress.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ft9/test_shared_admission.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/legacy/test_portal.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/legacy/test_v15.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/legacy/test_v16.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/pdf/test_clamd_scan_gate.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/pdf/test_concurrent_delivery.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/pdf/test_delivery_admission.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/pdf/test_legacy_inventory.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/pdf/test_pdf_hardening.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/pdf/test_snapshot_delivery.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/security/run_stage6151_security.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tests/ui/run_stage610_ui.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/candidate_backup.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/clamav_runtime.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/clamav_signature_update.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/clamd_preflight.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/desktop_start.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/fasttrack_checks.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/fasttrack_runner.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/legacy_pdf_inventory.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/pilot_acceptance.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/pilot_runtime.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/real_clamav_candidate_check.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/rebuild_manifest.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/run_candidate.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/run_pilot.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/synthetic_http_load.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/synthetic_pdf.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/synthetic_resource_load.py",
+      "ok": true
+    },
+    {
+      "check": "SHA256: tools/windows_clamav.py",
+      "ok": true
+    },
+    {
+      "check": "Fast Track 16 candidate backend SHA256",
+      "ok": true
+    },
+    {
+      "check": "13 HTML templates",
+      "ok": true
+    },
+    {
+      "check": "CSS and JS present",
+      "ok": true
+    },
+    {
+      "check": "No private DB/PDF/secret/archive or executables in bundle",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/shared_pdf_admission.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/manage.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/portal.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/secure_backup.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/scanner_readiness.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/candidate_runtime.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/candidate_backup.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/legacy_pdf_policy.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/production_check.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/candidate_entry.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: app/pilot_entry.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/synthetic_pdf.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/clamd_preflight.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/real_clamav_candidate_check.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/run_candidate.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/windows_clamav.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/fasttrack_checks.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/desktop_start.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/pilot_acceptance.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/fasttrack_runner.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/clamav_runtime.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/synthetic_http_load.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/rebuild_manifest.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/clamav_signature_update.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/run_pilot.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/candidate_backup.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/pilot_runtime.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/synthetic_resource_load.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tools/legacy_pdf_inventory.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/security/run_stage6151_security.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft14/test_pilot_workflow.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft11/test_candidate_backup.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft16/test_windows_clamav.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ui/run_stage610_ui.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft12/test_scanner_operations.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/dr/stage612_backup_helper_FAKE_ONLY.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/dr/stage612_fake_dr_test.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft10/test_candidate_workflow.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/legacy/test_v16.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/legacy/test_portal.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/legacy/test_v15.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft9/test_admission_ingress.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft9/http_fixture.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft9/test_shared_admission.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft8/fixtures.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft8/test_legacy_policy.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft8/test_clamd_preflight.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/ft15/test_desktop_start.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/pdf/test_pdf_hardening.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/pdf/test_clamd_scan_gate.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/pdf/test_delivery_admission.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/pdf/test_legacy_inventory.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/pdf/test_concurrent_delivery.py",
+      "ok": true
+    },
+    {
+      "check": "Python syntax: tests/pdf/test_snapshot_delivery.py",
+      "ok": true
+    },
+    {
+      "check": "Candidate PDF regression exists",
+      "ok": true
+    },
+    {
+      "check": "PDF response snapshot regression exists",
+      "ok": true
+    },
+    {
+      "check": "PDF delivery admission regression exists",
+      "ok": true
+    },
+    {
+      "check": "Clamd scan gate fake-only regression exists",
+      "ok": true
+    },
+    {
+      "check": "Read-only legacy PDF inventory tool exists",
+      "ok": true
+    },
+    {
+      "check": "Legacy PDF inventory fake-only regression exists",
+      "ok": true
+    },
+    {
+      "check": "Synthetic concurrent delivery regression exists",
+      "ok": true
+    },
+    {
+      "check": "Codex handoff instructions bundled",
+      "ok": true
+    },
+    {
+      "check": "No stale detached UI/security source fixtures",
+      "ok": true
+    }
+  ],
+  "release_gate": "HOLD / NO-GO",
+  "mode": "STATIC SOURCE ONLY - NOT SECURITY APPROVAL"
+}

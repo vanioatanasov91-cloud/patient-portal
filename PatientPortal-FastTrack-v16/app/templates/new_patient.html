@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Нов пациент{% endblock %}
+{% block content %}
+<a class="back" href="/dashboard">← Обратно към пациентите</a>
+<div class="narrow"><div class="page-heading"><div><div class="eyebrow">АДМИНИСТРАЦИЯ</div><h1>Създаване на пациент</h1><p class="muted">Въведете ЕГН или ЛНЧ като потребителско име. Системата ще генерира само временна парола.</p></div></div>
+<section class="panel"><h2>Данни за пациента</h2>{% if error %}<div class="alert">{{error}}</div>{% endif %}
+<form method="post" action="/patients/new" class="form-stack" autocomplete="off">
+<input type="hidden" name="csrf" value="{{csrf}}">
+<label>Три имена / име на пациента<input name="full_name" required minlength="2" maxlength="160" value="{{full_name or ''}}" placeholder="Например Иван Иванов Иванов"></label>
+<label>Вид идентификатор<select name="identifier_type" required><option value="EGN" {% if identifier_type != 'LNCH' %}selected{% endif %}>ЕГН — български гражданин</option><option value="LNCH" {% if identifier_type == 'LNCH' %}selected{% endif %}>ЛНЧ — личен номер на чужденец</option></select></label>
+<label>ЕГН / ЛНЧ (10 цифри)<input name="identifier" type="text" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" required value="{{identifier or ''}}" placeholder="Въведете 10 цифри" autocomplete="off"></label>
+<div class="notice">ЕГН/ЛНЧ ще бъде потребителското име на пациента. Преди създаване проверете самоличността и правилното изписване. Системата няма да допуска повторно регистриране на същия номер.</div>
+<button class="button primary" type="submit">Създай пациент и генерирай парола</button>
+</form></section></div>
+{% endblock %}

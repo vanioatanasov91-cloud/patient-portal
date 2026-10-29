@@ -1,0 +1,135 @@
+{
+  "mode": "REAL LINUX PILOT / OWNED RESOURCES / SYNTHETIC ONLY",
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "status": "PASS/HOLD",
+  "started_utc": "2026-10-29T07:13:40.281749+00:00",
+  "preflight": {
+    "mode": "LOCAL OPERATOR PROBE",
+    "checks": {
+      "ping": true,
+      "signature_age": true,
+      "clean_control": true,
+      "eicar_rejected": true
+    },
+    "protocol_passed": true,
+    "release_gate": "HOLD / NO-GO",
+    "production_approved": false,
+    "signature_timestamp_timezone": "UTC",
+    "manual_review_required": [
+      "confirm the daemon timestamp timezone",
+      "listener lockdown and firewall",
+      "signature update source and authenticity",
+      "daemon privileges and privacy of logs",
+      "resource limits and upload timeouts"
+    ]
+  },
+  "concurrent_status_counts": {
+    "200": 6,
+    "503": 26
+  },
+  "checks": [
+    {
+      "check": "shipping supervisor, HTTP and real scanner are ready",
+      "passed": true
+    },
+    {
+      "check": "real pilot PING/clean/EICAR/48h preflight passes",
+      "passed": true
+    },
+    {
+      "check": "normal synthetic login succeeds",
+      "passed": true
+    },
+    {
+      "check": "normal synthetic login succeeds",
+      "passed": true
+    },
+    {
+      "check": "normal synthetic login succeeds",
+      "passed": true
+    },
+    {
+      "check": "unattested legacy document is held",
+      "passed": true
+    },
+    {
+      "check": "clean PDF passes per-request readiness and actual INSTREAM scan",
+      "passed": true
+    },
+    {
+      "check": "staff preview matches exact bytes",
+      "passed": true
+    },
+    {
+      "check": "staff confirms and publishes previewed document",
+      "passed": true
+    },
+    {
+      "check": "owner downloads exact published bytes",
+      "passed": true
+    },
+    {
+      "check": "other patient cannot access document",
+      "passed": true
+    },
+    {
+      "check": "legacy rescan requires valid staff CSRF",
+      "passed": true
+    },
+    {
+      "check": "actual scanner refuses embedded EICAR PDF",
+      "passed": true
+    },
+    {
+      "check": "malware refusal leaves no report or orphan PDF",
+      "passed": true
+    },
+    {
+      "check": "acceptance owns both existing PDF admission slots",
+      "passed": true
+    },
+    {
+      "check": "real pilot workers respect shared admission and Retry-After",
+      "passed": true
+    },
+    {
+      "check": "32 concurrent requests return correct bytes or bounded overload",
+      "passed": true
+    },
+    {
+      "check": "staff explicitly rescans legacy PDF with real scanner",
+      "passed": true
+    },
+    {
+      "check": "rescanned legacy owner delivery succeeds",
+      "passed": true
+    },
+    {
+      "check": "controlled stop removes owned runtime and preserves store",
+      "passed": true
+    },
+    {
+      "check": "offline authenticated restore preserves candidate identity",
+      "passed": true
+    },
+    {
+      "check": "normal pilot restart preserves session/document/AV evidence",
+      "passed": true
+    },
+    {
+      "check": "restored normal candidate accepts original session and serves real-scanned document",
+      "passed": true
+    },
+    {
+      "check": "restored pilot database integrity passes",
+      "passed": true
+    },
+    {
+      "check": "acceptance leaves no owned scanner container",
+      "passed": true
+    }
+  ],
+  "passed": 25,
+  "finished_utc": "2026-10-29T07:14:17.200682+00:00"
+}
