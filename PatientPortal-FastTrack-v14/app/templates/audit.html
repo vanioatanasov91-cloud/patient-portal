@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}История на действията{% endblock %}
+{% block content %}
+<a class="back" href="/dashboard">← Администрация</a>
+<div class="page-heading"><div><span class="eyebrow">ЖУРНАЛ · V1.4</span><h1>История на действията</h1><p class="muted">Кой, какво и кога е направил. Не се записват пароли, ЕГН/ЛНЧ и съдържание на PDF.</p></div><span class="pill">{{total}} събития</span></div>
+<section class="panel"><form action="/audit" method="get" class="filterbar"><label class="filter-grow"><span>Тип събитие</span><select name="action"><option value="all">Всички събития</option>{% for key,label in actions.items() %}<option value="{{key}}" {% if action_filter==key %}selected{% endif %}>{{label}}</option>{% endfor %}</select></label><button class="button primary" type="submit">Филтрирай</button><a class="button secondary" href="/audit">Изчисти</a></form>
+<div class="table-wrap"><table><thead><tr><th>Дата / час (UTC)</th><th>Действие</th><th>Извършено от</th><th>Обект</th><th>Подробности</th></tr></thead><tbody>
+{% for r in records %}<tr><td>{{r.date.strftime('%d.%m.%Y %H:%M:%S')}}</td><td><b>{{r.action}}</b></td><td>{{r.actor}}</td><td>{{r.target}}</td><td>{{r.details}}</td></tr>{% else %}<tr><td colspan="5" class="muted center blank-row">Няма записани действия.</td></tr>{% endfor %}
+</tbody></table></div>
+{% if last_page>1 %}<div class="pagination"><span>Страница {{page_num}} от {{last_page}}</span><div class="header-actions">{% if page_num>1 %}<a class="button secondary compact" href="/audit?action={{action_filter}}&page_num={{page_num-1}}">← Предишна</a>{% endif %}{% if page_num<last_page %}<a class="button secondary compact" href="/audit?action={{action_filter}}&page_num={{page_num+1}}">Следваща →</a>{% endif %}</div></div>{% endif %}
+</section>
+{% endblock %}

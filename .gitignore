@@ -1,0 +1,26 @@
+# Never commit runtime state, patient data or credentials.
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.pdf
+*.pem
+*.key
+*.pfx
+*.p12
+*.ppbk
+*.cvd
+*.cld
+private_data/
+uploads/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.zip
+PatientPortal-*-data/
+PatientPortal-pilot-*/
+PatientPortal-*-venv/

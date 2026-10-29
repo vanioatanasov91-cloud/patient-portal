@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Редакция на пациент{% endblock %}
+{% block content %}
+<a class="back" href="/patients/{{patient.id}}">← Назад към пациента</a>
+<div class="page-heading"><div><div class="eyebrow">АДМИНИСТРАЦИЯ · V1.4</div><h1>Редактиране на пациент</h1><p class="muted">Актуализирайте името или входа с ЕГН/ЛНЧ. Паролата не се променя.</p></div></div>
+<section class="panel narrow"><h2>Пациентски данни</h2>
+{% if error %}<div class="alert" role="alert">{{error}}</div>{% endif %}
+<form method="post" action="/patients/{{patient.id}}/edit" class="form-stack">
+<input name="csrf" type="hidden" value="{{csrf}}">
+<label>Три имена<input name="full_name" required minlength="2" maxlength="160" value="{{full_name}}" autocomplete="off"></label>
+<label>Вид идентификатор<select name="identifier_type"><option value="EGN" {% if identifier_type=='EGN' %}selected{% endif %}>ЕГН</option><option value="LNCH" {% if identifier_type=='LNCH' %}selected{% endif %}>ЛНЧ</option></select></label>
+<label>ЕГН / ЛНЧ — потребителско име<input name="identifier" required inputmode="numeric" maxlength="80" value="{{identifier}}" autocomplete="off"></label>
+<div class="notice">Ако промените ЕГН/ЛНЧ, старото потребителско име повече няма да работи. Всички отворени пациентски сесии ще бъдат прекратени. Генерираната парола остава същата. Предайте новото потребителско име на пациента по сигурен начин.</div>
+<label class="checkline"><input type="checkbox" name="confirm_identifier" value="yes"><span>Потвърждавам, че проверих самоличността на пациента и евентуалното ново ЕГН/ЛНЧ.</span></label>
+<div class="header-actions"><button class="button primary" type="submit">Запази промените</button><a class="button secondary" href="/patients/{{patient.id}}">Отказ</a></div>
+</form></section>
+{% endblock %}

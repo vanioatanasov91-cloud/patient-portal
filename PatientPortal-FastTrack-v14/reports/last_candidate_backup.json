@@ -1,0 +1,6 @@
+{
+  "checks_passed": 15,
+  "mode": "SYNTHETIC OFFLINE AES-GCM / RESTORED NORMAL HTTP",
+  "production_approved": false,
+  "release_gate": "HOLD / NO-GO"
+}

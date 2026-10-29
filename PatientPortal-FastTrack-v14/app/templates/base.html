@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#142b43">
+  <title>{% block title %}Пациентски портал{% endblock %} · {{center.center_name}}</title>
+  <link rel="stylesheet" href="/static/style.css?v=16">
+  <script defer src="/static/portal-ui.js?v=16"></script>
+</head>
+<body class="{% if user and user.role == 'staff' %}is-staff{% elif user and user.role == 'patient' %}is-patient{% else %}is-public{% endif %}">
+{% if user and user.role == 'staff' %}
+  <aside class="side-nav" aria-label="Служебна навигация">
+    <a class="side-brand" href="/dashboard">
+      {% if center.logo_filename %}<img src="/center-logo" alt="Лого" class="brand-logo">{% else %}<span class="brand-mark">✚</span>{% endif %}
+      <span><b>{{center.center_name}}</b><small>Diagnostic Portal <em>v1.6</em></small></span>
+    </a>
+    <div class="side-caption">РАБОТНО ПРОСТРАНСТВО</div>
+    <nav class="side-links">
+      <a class="{% if path == '/dashboard' %}active{% endif %}" href="/dashboard"><span class="nav-icon">▦</span> Табло и пациенти</a>
+      <a class="{% if path == '/reports' %}active{% endif %}" href="/reports"><span class="nav-icon">▤</span> Всички разчитания</a>
+      <a class="{% if path == '/patients/new' %}active{% endif %}" href="/patients/new"><span class="nav-icon">＋</span> Нов пациент</a>
+      <a class="{% if path == '/audit' %}active{% endif %}" href="/audit"><span class="nav-icon">◷</span> История</a>
+    </nav>
+    <div class="side-caption">АДМИНИСТРАЦИЯ</div>
+    <nav class="side-links">
+      <a class="{% if path == '/settings' %}active{% endif %}" href="/settings"><span class="nav-icon">⚙</span> Настройки</a>
+      <a class="{% if path == '/change-password' %}active{% endif %}" href="/change-password"><span class="nav-icon">♙</span> Моята парола</a>
+    </nav>
+    <div class="side-bottom"><span class="side-dot"></span> Локална тестова среда <small>Без реални пациентски данни</small></div>
+  </aside>
+{% endif %}
+<div class="app-shell">
+  <header class="topbar">
+    <div class="top-inner">
+      {% if user and user.role == 'staff' %}
+      <a class="mobile-brand" href="/dashboard">✚ {{center.center_name}}</a>
+      <div class="work-label"><span class="work-avatar">✚</span><span>Административен панел<small>Портал за образна диагностика</small></span></div>
+      <form class="header-search" method="get" action="/dashboard" role="search"><input name="q" autocomplete="off" maxlength="80" placeholder="⌕  Намери пациент по име или ЕГН/ЛНЧ" aria-label="Търсене на пациент"><button type="submit" aria-label="Търси">⌕</button></form>
+      <div class="header-user"><span class="user-avatar">{{user.full_name[:1]}}</span><span class="user-label">{{user.full_name}}</span><form action="/logout" method="post" class="inline-form"><input type="hidden" name="csrf" value="{{csrf}}"><button class="nav-logout" type="submit">Изход ↗</button></form></div>
+      <nav class="mobile-nav" aria-label="Навигация"><a href="/dashboard">Пациенти</a><a href="/reports">PDF</a><a href="/patients/new">Нов</a><a href="/audit">История</a><a href="/settings">Настройки</a></nav>
+      {% else %}
+      <a href="/dashboard" class="brand">{% if center.logo_filename %}<img src="/center-logo" alt="Лого" class="brand-logo">{% else %}<span class="mark">✚</span>{% endif %}<span><b>{{center.center_name}}</b><small>Портал за резултати от образна диагностика</small></span></a>
+      {% if user %}<nav class="topnav"><a href="/dashboard">Моите разчитания</a><a href="/change-password">Парола</a><form action="/logout" method="post" class="inline-form"><input type="hidden" name="csrf" value="{{csrf}}"><button class="nav-logout" type="submit">Изход</button></form></nav>{% endif %}
+      {% endif %}
+    </div>
+  </header>
+  <main class="container">{% if candidate_mode|default(false) %}<div class="notice" role="status"><b>ТЕСТОВ КАНДИДАТ v1.14</b> · Само синтетични данни · <b>HOLD / NO-GO</b></div>{% endif %}{% block content %}{% endblock %}</main>
+  <footer class="foot"><span>© {{center.center_name}} · Пациентски портал v1.6</span><span>{% if center.phone %}{{center.phone}} · {% endif %}{% if center.email %}{{center.email}} · {% endif %}Локална тестова версия</span></footer>
+</div>
+</body>
+</html>
