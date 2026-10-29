@@ -1,11 +1,14 @@
-# Patient Portal — Fast Track17
+# Patient Portal — Fast Track18
 
-Потребителят потвърди Windows15+ClamAV16 функционалния PDF сценарий: legacy scan/preview, ново качване/публикуване, owner view/download и отказ за друг пациент. Това е ръчна проверка; точният обхват е в [WINDOWS_ACCEPTANCE_BG.md](PatientPortal-FastTrack-v17/WINDOWS_ACCEPTANCE_BG.md). **HOLD / NO-GO остава.**
+Работно име **„Анакиевски“**, бъдещ достъп през интернет от вкъщи. Домейн/сървър още няма. Предложение: **anakievski.bg → portal.anakievski.bg**, след проверка на регистрационната наличност/права. Публичният DNS не намери NS делегация за предложените имена, но това не доказва свобода за регистрация; registry страницата върна HTTP503 при опита.
 
-Следва **криптиран архив и отделно пробно възстановяване**. [Изтегли обновения проект17](downloads/PatientPortal_FastTrack_v17_Codex.zip), извлечи целия ZIP в нова папка, спри собствения портал8000 с Ctrl+C и стартирай **BACKUP_WINDOWS.cmd**. Новата парола за архива се въвежда локално и скрито, поне16 знака. Ползват се съществуващите FastTrack15 venv/data; няма ново init/reset или преинсталиране на ClamAV.
+**[Изтегли версия18](downloads/PatientPortal_FastTrack_v18_Codex.zip)**. Пакетът съдържа текущия код, точния Windows PDF/backup/restore acceptance запис и конкретен план за Интернет внедряване. За разглеждане на плана не е нужно да спираш/преинсталираш работещия портал.
 
-**RESTORE_TEST_WINDOWS.cmd** възстановява последния собствен архив в нова уникална папка. **START_RESTORED_WINDOWS.cmd** отваря възстановеното копие наlocalhost8001. Оригиналната data папка се запазва. [Точни стъпки](PatientPortal-FastTrack-v17/WINDOWS_BACKUP_BG.md).
+- [Домейн и hosting](PatientPortal-FastTrack-v18/DOMAIN_AND_HOSTING_BG.md)
+- [Архитектура и5 етапа](PatientPortal-FastTrack-v18/INTERNET_DEPLOYMENT_BG.md)
+- [Задание за независим преглед](PatientPortal-FastTrack-v18/INDEPENDENT_REVIEW_BG.md)
+- [Действителен отчет](PatientPortal-FastTrack-v18/TEST_REPORT_BG.md)
 
-18/18 regression групи PASS;15 оригинални backup проверки и11 нови desktop/drill случая. Поправено е изричното затваряне на readonly SQLite handles при config validation, без промяна на schema/crypto формата. Native Windows backup/getpass/drill предстои да се потвърди; Linux тестовете не го удостоверяват. [Действителен отчет](PatientPortal-FastTrack-v17/TEST_REPORT_BG.md).
+**18/18 regression групи PASS**. Runtime app/scanner/backup/desktop кодът и старите тестове са запазени от17. Променени са deployment документите/evidence и UI/runner version labels. Кандидатът остава localhost/synthetic; нужен е отделен прегледан production bootstrap/schema path, който запазва AV/legacy hold/shared admission/freshness и HTTPS/MFA договора.
 
-Пакетът е 345387 bytes с135 source/report файла. SHA256: `4286401050f2c0a2ad90533b15aed571fa267cd758879bdb727d07b88ff05947`. В repository/ZIP няма .ppbk, пароли, DB/PDF, ключове, venv, ClamAV EXE/DLL/CVD. Предишните source версии14/15/16 и техните архиви са запазени отделно. Няма Windows service/firewall/registry/ACL/PATH промени. Само синтетични данни; реална употреба изисква независима проверка.
+Пакет: 360145 bytes,141 source/report файла. SHA256: `5600c773d00cb78614e3400e00bf494ea7d11279f4ed198dccf0276952989332`. Няма пароли, DB/PDF, keys,.ppbk, venv или ClamAV runtime. Старите releases и ZIP са запазени. Няма покупка на домейн/hosting, публично внедряване или DNS/firewall/service/ACL промени. **HOLD / NO-GO остава до независимо одобрение за конкретната реална среда.**

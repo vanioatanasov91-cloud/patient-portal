@@ -1,0 +1,9 @@
+{
+  "mode": "SHIPPING CLI / NORMAL CANDIDATE / SYNTHETIC ONLY",
+  "checks_passed": 42,
+  "workers": 2,
+  "restart_verified": true,
+  "scanner": "fake loopback INSTREAM server; no real AV claim",
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false
+}

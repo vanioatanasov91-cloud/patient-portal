@@ -1,0 +1,239 @@
+{
+  "mode": "REAL CLAMAV / OWNED LINUX DOCKER LAB / SYNTHETIC ONLY",
+  "image": "clamav/clamav@sha256:bda39705e291105049c3936e2803ac90b955172af8030f94f05dce1252df6c6d",
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "status": "PASS/HOLD",
+  "started_utc": "2026-10-29T06:34:18.181292+00:00",
+  "preflight_executed": true,
+  "signature_update": {
+    "requested": true,
+    "status": "VERIFIED_SNAPSHOT",
+    "completed": true,
+    "updated": true,
+    "connectivity_diagnostic": {
+      "http_status": 403,
+      "freshclam_attempt_required": true,
+      "diagnostic": "HTTP_HEAD_REFUSED"
+    },
+    "source": "https://database.clamav.net/daily.cvd",
+    "before": [
+      {
+        "database": "main",
+        "Build time": "16 Dec 2025 23:18 +0000",
+        "Version": "63",
+        "Signatures": "3287027",
+        "verified": true,
+        "sha256": "0b2182d229f46981ec8f535382222f7c9dfdd656b250ad47988b910a8d302365"
+      },
+      {
+        "database": "daily",
+        "Build time": "25 Oct 2026 06:24 +0000",
+        "Version": "28164",
+        "Signatures": "355788",
+        "verified": true,
+        "sha256": "bbbe24cfe66a9e00bdba3f78d47b36700ac29114f38f2ff5aebec504f5c733e6"
+      },
+      {
+        "database": "bytecode",
+        "Build time": "11 Sep 2025 08:29 -0400",
+        "Version": "339",
+        "Signatures": "80",
+        "verified": true,
+        "sha256": "6d4aa01f219e988060fc419f495d07f27e0cdf1a2cccc065971da922c76f7ffb"
+      }
+    ],
+    "after": [
+      {
+        "database": "main",
+        "Build time": "16 Dec 2025 23:18 +0000",
+        "Version": "63",
+        "Signatures": "3287027",
+        "verified": true,
+        "sha256": "0b2182d229f46981ec8f535382222f7c9dfdd656b250ad47988b910a8d302365"
+      },
+      {
+        "database": "daily",
+        "Build time": "29 Oct 2026 06:24 +0000",
+        "Version": "28168",
+        "Signatures": "355838",
+        "verified": true,
+        "sha256": "78f0db96691a7194f15790a60bdbc496068df38e7d55db9fe41ccc18a04c765d"
+      },
+      {
+        "database": "bytecode",
+        "Build time": "11 Sep 2025 08:29 -0400",
+        "Version": "339",
+        "Signatures": "80",
+        "verified": true,
+        "sha256": "6d4aa01f219e988060fc419f495d07f27e0cdf1a2cccc065971da922c76f7ffb"
+      }
+    ],
+    "freshness_requires_live_preflight": true
+  },
+  "databases": [
+    {
+      "database": "main",
+      "Build time": "16 Dec 2025 23:18 +0000",
+      "Version": "63",
+      "Signatures": "3287027",
+      "verified": true,
+      "sha256": "0b2182d229f46981ec8f535382222f7c9dfdd656b250ad47988b910a8d302365"
+    },
+    {
+      "database": "daily",
+      "Build time": "29 Oct 2026 06:24 +0000",
+      "Version": "28168",
+      "Signatures": "355838",
+      "verified": true,
+      "sha256": "78f0db96691a7194f15790a60bdbc496068df38e7d55db9fe41ccc18a04c765d"
+    },
+    {
+      "database": "bytecode",
+      "Build time": "11 Sep 2025 08:29 -0400",
+      "Version": "339",
+      "Signatures": "80",
+      "verified": true,
+      "sha256": "6d4aa01f219e988060fc419f495d07f27e0cdf1a2cccc065971da922c76f7ffb"
+    }
+  ],
+  "preflight": {
+    "mode": "LOCAL OPERATOR PROBE",
+    "checks": {
+      "ping": true,
+      "signature_age": true,
+      "clean_control": true,
+      "eicar_rejected": true
+    },
+    "protocol_passed": true,
+    "release_gate": "HOLD / NO-GO",
+    "production_approved": false,
+    "signature_timestamp_timezone": "UTC",
+    "manual_review_required": [
+      "confirm the daemon timestamp timezone",
+      "listener lockdown and firewall",
+      "signature update source and authenticity",
+      "daemon privileges and privacy of logs",
+      "resource limits and upload timeouts"
+    ]
+  },
+  "scanner_version": "ClamAV 1.5.4/28168/Thu Oct 29 06:24:16 2026",
+  "signature_age_passed": true,
+  "checks": [
+    {
+      "check": "official main CVD digital signature verifies",
+      "passed": true
+    },
+    {
+      "check": "official daily CVD digital signature verifies",
+      "passed": true
+    },
+    {
+      "check": "official bytecode CVD digital signature verifies",
+      "passed": true
+    },
+    {
+      "check": "scanner port published exclusively on host loopback",
+      "passed": true
+    },
+    {
+      "check": "scanner has only expected read-only config/signature mounts and no candidate database/document mounts",
+      "passed": true
+    },
+    {
+      "check": "scanner runs non-root with read-only root and explicit 2 GiB / 2 CPU limits",
+      "passed": true
+    },
+    {
+      "check": "real ClamAV operational ping",
+      "passed": true
+    },
+    {
+      "check": "real ClamAV operational clean_control",
+      "passed": true
+    },
+    {
+      "check": "real ClamAV operational eicar_rejected",
+      "passed": true
+    },
+    {
+      "check": "real scanner detects harmless EICAR embedded inside a complete PDF",
+      "passed": true
+    },
+    {
+      "check": "normal candidate initialized against owned real scanner",
+      "passed": true
+    },
+    {
+      "check": "synthetic login succeeds with real scanner connected",
+      "passed": true
+    },
+    {
+      "check": "synthetic login succeeds with real scanner connected",
+      "passed": true
+    },
+    {
+      "check": "real ClamAV clean PDF creates a normal candidate draft",
+      "passed": true
+    },
+    {
+      "check": "real-scanned draft previews exact bytes",
+      "passed": true
+    },
+    {
+      "check": "real-scanned document publishes and downloads to its owner",
+      "passed": true
+    },
+    {
+      "check": "embedded EICAR PDF is rejected by the actual upload antivirus gate",
+      "passed": true
+    },
+    {
+      "check": "malware signature is not exposed in patient-facing error",
+      "passed": true
+    },
+    {
+      "check": "EICAR rejection leaves no report or stored PDF",
+      "passed": true
+    },
+    {
+      "check": "INSTREAM scanner log omits generated patient usernames and original document filename",
+      "passed": true
+    },
+    {
+      "check": "stopped real scanner blocks new ingestion",
+      "passed": true
+    },
+    {
+      "check": "scanner outage leaves no orphan PDF",
+      "passed": true
+    },
+    {
+      "check": "outage does not silently revoke previously attested published report",
+      "passed": true
+    },
+    {
+      "check": "real scanner recovery permits explicit legacy rescan",
+      "passed": true
+    },
+    {
+      "check": "real-scanned legacy owner delivery recovers",
+      "passed": true
+    },
+    {
+      "check": "encrypted restore preserves pre-backup patient session",
+      "passed": true
+    },
+    {
+      "check": "restored candidate serves real-scanned PDF with durable AV evidence",
+      "passed": true
+    },
+    {
+      "check": "restored real-scanner candidate SQLite integrity is valid",
+      "passed": true
+    }
+  ],
+  "functional_passed": 28,
+  "cleanup_completed": true,
+  "finished_utc": "2026-10-29T06:35:00.408472+00:00"
+}

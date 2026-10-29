@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-10-29T20:49:04.672764+00:00",
+  "user_date": "2026-10-29",
+  "user_timezone": "Europe/Sofia",
+  "portal_release": "1.15",
+  "scanner_companion_release": 16,
+  "mode": "USER SCREENSHOTS / USER-REPORTED SYNTHETIC WINDOWS ACCEPTANCE",
+  "checks": {
+    "staff_login_settings": "USER_SCREENSHOT",
+    "scanner_ready_message": "USER_SCREENSHOT",
+    "legacy_scan_preview": "USER_REPORTED_PASS",
+    "new_upload_draft_publish": "USER_REPORTED_COMPLETION",
+    "owner_view_download": "USER_REPORTED_PASS",
+    "other_patient_listing_and_direct_url_denial": "USER_REPORTED_PASS",
+    "encrypted_backup": "USER_SCREENSHOT_SUCCESS_6_FILES",
+    "restore_drill_and_pdf": "USER_REPORTED_WORKING"
+  },
+  "windows_http_trace_collected": false,
+  "windows_backup_restore_tested": true,
+  "independent_review": false,
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "backup_tools_release": 17,
+  "windows_backup_restore_evidence": "BACKUP_SCREENSHOT_AND_USER_REPORTED_RESTORE_DRILL"
+}

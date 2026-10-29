@@ -1,0 +1,34 @@
+{
+  "mode": "INTERNET DEPLOYMENT PROPOSAL ONLY",
+  "user_choices": {
+    "patient_access": "internet_from_home",
+    "registered_domain": false,
+    "server_available": false
+  },
+  "domain_name": null,
+  "provider": null,
+  "budget": null,
+  "proposed_architecture": {
+    "region": "EU/EEA subject to provider/legal review",
+    "hosts": 1,
+    "database": "local SQLite single-host proposal",
+    "public_frontend": "HTTPS reverse proxy",
+    "application": "loopback only",
+    "scanner": "own loopback clamd",
+    "backups": "encrypted separate storage"
+  },
+  "blockers": [
+    "domain/provider selection",
+    "reviewed production bootstrap preserving candidate AV/admission/legacy policy",
+    "explicit versioned schema procedure without demo data/import-time migration",
+    "target HTTPS/proxy/auth/scanner/resource/restore evidence",
+    "independent security/privacy/deployment review"
+  ],
+  "applied_infrastructure_changes": false,
+  "production_approved": false,
+  "release_gate": "HOLD / NO-GO",
+  "requested_name": "Анакиевски",
+  "proposed_domain": "anakievski.bg",
+  "proposed_portal_hostname": "portal.anakievski.bg",
+  "registration_availability_verified": false
+}

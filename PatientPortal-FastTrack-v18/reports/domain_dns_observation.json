@@ -1,0 +1,33 @@
+{
+  "checked_at_utc": "2026-10-29T20:50:13.350320+00:00",
+  "source": "Google Public DNS HTTPS NS lookup",
+  "mode": "PUBLIC DNS OBSERVATION ONLY; NOT REGISTRAR AVAILABILITY",
+  "domains": [
+    {
+      "domain": "anakievski.bg",
+      "dns_status": 3,
+      "ns_records_found": false,
+      "registration_availability": "NOT_VERIFIED"
+    },
+    {
+      "domain": "anakievski-med.bg",
+      "dns_status": 3,
+      "ns_records_found": false,
+      "registration_availability": "NOT_VERIFIED"
+    },
+    {
+      "domain": "anakievski.eu",
+      "dns_status": 3,
+      "ns_records_found": false,
+      "registration_availability": "NOT_VERIFIED"
+    }
+  ],
+  "registrar_availability_checked": false,
+  "purchased_or_registered": false,
+  "release_gate": "HOLD / NO-GO",
+  "registrar_public_homepage_attempt": {
+    "url": "https://www.register.bg/",
+    "http_status": 503,
+    "availability_lookup_completed": false
+  }
+}

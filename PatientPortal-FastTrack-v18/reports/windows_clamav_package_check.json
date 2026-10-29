@@ -1,0 +1,11 @@
+{
+  "mode": "OFFICIAL WINDOWS ZIP CHECKSUM / EXTRACTION / PE X64 HEADERS ONLY",
+  "status": "PASS/HOLD",
+  "package_bytes": 225774978,
+  "package_sha256": "0d9e0228b2674137ea1a2853566c98a0278ad52ab2582c3d6dbd75373848c395",
+  "runtime_files": 48,
+  "runtime_bytes": 134807894,
+  "native_windows_executed": false,
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false
+}

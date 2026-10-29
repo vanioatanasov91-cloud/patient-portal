@@ -1,0 +1,187 @@
+{
+  "title": "Patient Portal Fast Track 18 — safe test run",
+  "timestamp_utc": "2026-10-29T20:54:06.400709+00:00",
+  "test_mode": "OFFLINE SYNTHETIC ONLY",
+  "source": "modified candidate app/portal.py, not verified installed backend",
+  "status": "PASS",
+  "passed": 18,
+  "attempted": 18,
+  "planned": 18,
+  "tests": [
+    {
+      "id": "static",
+      "label": "Source integrity and syntax",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 0.128,
+      "output_lines": 180,
+      "output_sha256": "ca4a2e6fb7564e3b75004b43700544629835cf1e92d8fa1fb56a964173b6f228"
+    },
+    {
+      "id": "dr",
+      "label": "Synthetic disaster recovery",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 0.598,
+      "output_lines": 12,
+      "output_sha256": "c039888280a50b6ff5cebb2966b23cc2ad0a3ca8a53e35688ae3948c3a0de057"
+    },
+    {
+      "id": "ui",
+      "label": "Synthetic UI acceptance",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 1.672,
+      "output_lines": 92,
+      "output_sha256": "4559ca2825a9bd868195158f0ec684838e17da644b14b439d593059a7f909a1f"
+    },
+    {
+      "id": "security",
+      "label": "Synthetic access and security (59 assertions)",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 2.199,
+      "output_lines": 68,
+      "output_sha256": "f8ef8a87bc94716ab6737a5d9408ef2dbccfde5a8a097bea9f07059258ab754b"
+    },
+    {
+      "id": "pdf",
+      "label": "Candidate PDF integrity & publishing",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 1.379,
+      "output_lines": 33,
+      "output_sha256": "730422448b7fea03ae512a3c3b450390925d2533304034c4d050cf9f92b20327"
+    },
+    {
+      "id": "snapshot",
+      "label": "Verified PDF delivery snapshot (16 checks)",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 1.33,
+      "output_lines": 21,
+      "output_sha256": "1a3146a91dc333a10842aeebadc7419412f5bcf70e311fae97a1bd127eb7a656"
+    },
+    {
+      "id": "admission",
+      "label": "Bounded PDF delivery admission (synthetic)",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 1.206,
+      "output_lines": 25,
+      "output_sha256": "a3b19d002901daef22ad0f3af178ffdf5401e491160e477e6ebe01dba75bce9a"
+    },
+    {
+      "id": "scan",
+      "label": "Local clamd upload scan gate (25 synthetic checks)",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 1.504,
+      "output_lines": 30,
+      "output_sha256": "fbfdd596c5f66e2bb557b7e1dfb3c1eca832a9bfc054633be4a0f39250579b4e"
+    },
+    {
+      "id": "legacy_inventory",
+      "label": "Legacy PDF offline inventory (synthetic)",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 0.132,
+      "output_lines": 16,
+      "output_sha256": "940b1bf090f92f562e26f4361937d59604db59fd4e284e4575d1b4bd9524653e"
+    },
+    {
+      "id": "concurrency",
+      "label": "Bounded PDF response concurrency (16 synthetic contenders)",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 0.765,
+      "output_lines": 14,
+      "output_sha256": "36cd3319b74ca812a2b89bb7b151ace64aafc4e0fbdeef642be06f83ae07e5eb"
+    },
+    {
+      "id": "legacy_policy_v8",
+      "label": "Synthetic legacy AV hold & staff remediation",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 0.908,
+      "output_lines": 36,
+      "output_sha256": "5d9a82f29f108adef5a2b3c8c1a2f508e01adccd10e56c1508562e0150de4bc0"
+    },
+    {
+      "id": "clamd_preflight_v8",
+      "label": "Original scanner operations plus portable Windows package safety",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 0.889,
+      "output_lines": 66,
+      "output_sha256": "852f039ac23fb1344f963baa74a9d91739048d9125637d8633d5384bcbf438a8"
+    },
+    {
+      "id": "http_load_v8",
+      "label": "Ephemeral two-worker HTTP mixed load (32 clients)",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 2.627,
+      "output_lines": 40,
+      "output_sha256": "d69e689c16afb7d89fcb58fe2c6b44c05add680b2121e9901e4c023f0914d0d6"
+    },
+    {
+      "id": "shared_admission_v9",
+      "label": "Cross-process PDF admission and crash recovery",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 0.489,
+      "output_lines": 12,
+      "output_sha256": "587dac553c011e2e26e62ba8ac028ae7a6dac3895086422d458443e2831a6637"
+    },
+    {
+      "id": "ingress_v9",
+      "label": "ASGI ingress, multipart cleanup and cancellation lifetime",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 0.355,
+      "output_lines": 34,
+      "output_sha256": "9aff7bf4c6233b1f39b0c3ea02b25bb16825748c844eabf28d9f67b83ddd3dd8"
+    },
+    {
+      "id": "resource_load_v9",
+      "label": "Two-worker large PDF boundaries and 30s bounded soak",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 34.688,
+      "output_lines": 93,
+      "output_sha256": "ece13907a1cac9efe554406df0d5aadd8348c068391b89a24dc216d2a4ead618"
+    },
+    {
+      "id": "candidate_workflow_v10",
+      "label": "Original candidate/pilot workflow plus desktop bootstrap",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 21.607,
+      "output_lines": 71,
+      "output_sha256": "db459ec00480fe029fa60439cbdfc734348eb961b8d4796e3ebef3b8b8e16200"
+    },
+    {
+      "id": "candidate_backup_v11",
+      "label": "Original backup plus desktop restore drill",
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 12.323,
+      "output_lines": 35,
+      "output_sha256": "2e7836f9fdff322fd12f370fb454c724772b52449eb607e9d44cc3696e818616"
+    }
+  ],
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "limitations": [
+    "No real patient data, production services or ACL are tested",
+    "No independently validated restore",
+    "No independent security or GDPR approval",
+    "This default suite uses mocked scanners; real ClamAV has its separate explicit report",
+    "Offline inventory never checks malware and cannot attest existing files",
+    "Two-worker HTTP smoke uses generated fixtures and scanner OFF; no production capacity claim",
+    "Integrated candidate uses a fresh synthetic store only; no production migration/activation",
+    "Shared admission is single-host; no production proxy or OS limits applied",
+    "Resource sample and 30s soak are not capacity certification or enforced RSS ceilings"
+  ]
+}
