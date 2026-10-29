@@ -1,0 +1,31 @@
+{
+  "mode": "EPHEMERAL LOOPBACK / SYNTHETIC ONLY",
+  "workers_observed": 2,
+  "clients": 32,
+  "requests": 32,
+  "status_counts": {
+    "download:503": 10,
+    "upload:303": 8,
+    "download:200": 14
+  },
+  "pdf_bytes": 132382,
+  "latency_ms": {
+    "median": 162.91,
+    "p95": 191.55,
+    "max": 203.86
+  },
+  "worker_peak_rss_bytes": [
+    75476992,
+    75501568
+  ],
+  "rss_scope": "sampled Linux /proc per observed worker; excludes proxy/parent; not a memory bound",
+  "elapsed_seconds": 1.464,
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "limitations": [
+    "short synthetic smoke test, not capacity certification",
+    "scanner OFF for uploads and seeded mocked attestations",
+    "no shared admission limit or proxy ingress/spool protection",
+    "single-host SQLite; not a distributed database benchmark"
+  ]
+}

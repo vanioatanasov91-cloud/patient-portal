@@ -1,11 +1,9 @@
-# Patient Portal — Fast Track 14
+# Patient Portal — Fast Track 15
 
-Готовият кодов пакет е в **downloads/PatientPortal_FastTrack_v14_Codex.zip**. В GitHub отвори ZIP файла и избери **Download raw file** (иконата със стрелка надолу). Кодът, документите и сборните тестови отчети са и в **PatientPortal-FastTrack-v14/**.
+За локално Windows стартиране изтегли **downloads/PatientPortal_FastTrack_v15_Codex.zip**, извлечи целия пакет и стартирай **START_WINDOWS.cmd**. Той използва installed Python3.13 (резервен3.12), source-relative paths и own LOCALAPPDATA test store. Native Windows startup трябва да се потвърди на целевия компютър; tests са в Linux плюс Windows wheel dry-run. Подробности: PatientPortal-FastTrack-v15/WINDOWS_START_BG.md.
 
-Пакетът е същият като проверената версия14: 110 файла, 285716 bytes, SHA256 `7d929c48d92fadebeb7e34708061b5927fb70c30527d6602b3a310d1ec1a0dc1`. Няма runtime бази/PDF/акаунти/ключове/ClamAV databases.
+Пакетът съдържа 118 source/report файла, 304038 bytes. SHA256: `272051aafdc3be55fe4c10a451ba204326a11e4df69d50c5ce70f7a60ab63295`. Няма passwords/DB/PDF/keys/runtime stores/ClamAV databases.
 
-Работи само със синтетични данни. Преди промени прочети PatientPortal-FastTrack-v14/AGENTS.md и CODEX_START_HERE_BG.md. Начало: CANDIDATE_START_BG.md/PILOT_BG.md в тази папка. Runtime data и venv трябва да са извън source/repository.
+18/18 regression groups PASS,31 fixed Windows64/CPython3.13 wheels resolved;9 desktop cases допълват непроменените предишни tests. Code е и в PatientPortal-FastTrack-v15/. Предишната версия14 и нейният ZIP са запазени отделно. Runtime data и venv остават извън source/repository.
 
-Version14: 18/18 regression groups; 25 real pilot acceptance checks; описаните32 конкурентни заявки/ограничения и scanner outage/recovery са в TEST_REPORT_BG.md и PILOT_REPORT_BG.md. Това са исторически резултати, не гаранция за текущ runtime на друга машина.
-
-**HOLD / NO-GO остава до независим review. Няма production approval или промяна на реална инсталация.**
+Login/UI/branding са достъпни без scanner; PDF upload/rescan изискват отделно подготвен local UTC clamd/48h precheck. Няма automatic Python/ClamAV/service/firewall/ACL install. **HOLD / NO-GO остава до независим review. Само synthetic данни, няма production approval.**

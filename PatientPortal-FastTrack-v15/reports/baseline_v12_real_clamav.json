@@ -1,0 +1,176 @@
+{
+  "mode": "REAL CLAMAV / OWNED LINUX DOCKER LAB / SYNTHETIC ONLY",
+  "image": "clamav/clamav@sha256:bda39705e291105049c3936e2803ac90b955172af8030f94f05dce1252df6c6d",
+  "release_gate": "HOLD / NO-GO",
+  "production_approved": false,
+  "status": "FUNCTIONAL_PASS/FRESHNESS_HOLD",
+  "started_utc": "2026-10-29T04:14:03.573140+00:00",
+  "preflight_executed": true,
+  "signature_update": {
+    "requested": false,
+    "status": "IMAGE_DATABASES_ONLY",
+    "updated": false
+  },
+  "databases": [
+    {
+      "database": "main",
+      "Build time": "16 Dec 2025 23:18 +0000",
+      "Version": "63",
+      "Signatures": "3287027",
+      "verified": true
+    },
+    {
+      "database": "daily",
+      "Build time": "25 Oct 2026 06:24 +0000",
+      "Version": "28164",
+      "Signatures": "355788",
+      "verified": true
+    },
+    {
+      "database": "bytecode",
+      "Build time": "11 Sep 2025 08:29 -0400",
+      "Version": "339",
+      "Signatures": "80",
+      "verified": true
+    }
+  ],
+  "preflight": {
+    "mode": "LOCAL OPERATOR PROBE",
+    "checks": {
+      "ping": true,
+      "signature_age": false,
+      "clean_control": true,
+      "eicar_rejected": true
+    },
+    "protocol_passed": false,
+    "release_gate": "HOLD / NO-GO",
+    "production_approved": false,
+    "signature_timestamp_timezone": "UTC",
+    "manual_review_required": [
+      "confirm the daemon timestamp timezone",
+      "listener lockdown and firewall",
+      "signature update source and authenticity",
+      "daemon privileges and privacy of logs",
+      "resource limits and upload timeouts"
+    ]
+  },
+  "scanner_version": "ClamAV 1.5.4/28164/Sun Oct 25 06:24:12 2026",
+  "signature_age_passed": false,
+  "checks": [
+    {
+      "check": "official main CVD digital signature verifies",
+      "passed": true
+    },
+    {
+      "check": "official daily CVD digital signature verifies",
+      "passed": true
+    },
+    {
+      "check": "official bytecode CVD digital signature verifies",
+      "passed": true
+    },
+    {
+      "check": "scanner port published exclusively on host loopback",
+      "passed": true
+    },
+    {
+      "check": "scanner has only expected read-only config/signature mounts and no candidate database/document mounts",
+      "passed": true
+    },
+    {
+      "check": "scanner runs non-root with read-only root and explicit 2 GiB / 2 CPU limits",
+      "passed": true
+    },
+    {
+      "check": "real ClamAV operational ping",
+      "passed": true
+    },
+    {
+      "check": "real ClamAV operational clean_control",
+      "passed": true
+    },
+    {
+      "check": "real ClamAV operational eicar_rejected",
+      "passed": true
+    },
+    {
+      "check": "real scanner detects harmless EICAR embedded inside a complete PDF",
+      "passed": true
+    },
+    {
+      "check": "normal candidate initialized against owned real scanner",
+      "passed": true
+    },
+    {
+      "check": "synthetic login succeeds with real scanner connected",
+      "passed": true
+    },
+    {
+      "check": "synthetic login succeeds with real scanner connected",
+      "passed": true
+    },
+    {
+      "check": "real ClamAV clean PDF creates a normal candidate draft",
+      "passed": true
+    },
+    {
+      "check": "real-scanned draft previews exact bytes",
+      "passed": true
+    },
+    {
+      "check": "real-scanned document publishes and downloads to its owner",
+      "passed": true
+    },
+    {
+      "check": "embedded EICAR PDF is rejected by the actual upload antivirus gate",
+      "passed": true
+    },
+    {
+      "check": "malware signature is not exposed in patient-facing error",
+      "passed": true
+    },
+    {
+      "check": "EICAR rejection leaves no report or stored PDF",
+      "passed": true
+    },
+    {
+      "check": "INSTREAM scanner log omits generated patient usernames and original document filename",
+      "passed": true
+    },
+    {
+      "check": "stopped real scanner blocks new ingestion",
+      "passed": true
+    },
+    {
+      "check": "scanner outage leaves no orphan PDF",
+      "passed": true
+    },
+    {
+      "check": "outage does not silently revoke previously attested published report",
+      "passed": true
+    },
+    {
+      "check": "real scanner recovery permits explicit legacy rescan",
+      "passed": true
+    },
+    {
+      "check": "real-scanned legacy owner delivery recovers",
+      "passed": true
+    },
+    {
+      "check": "encrypted restore preserves pre-backup patient session",
+      "passed": true
+    },
+    {
+      "check": "restored candidate serves real-scanned PDF with durable AV evidence",
+      "passed": true
+    },
+    {
+      "check": "restored real-scanner candidate SQLite integrity is valid",
+      "passed": true
+    }
+  ],
+  "functional_passed": 28,
+  "cleanup_completed": true,
+  "finished_utc": "2026-10-29T04:14:31.855970+00:00"
+}

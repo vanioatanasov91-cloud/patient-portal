@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Моите резултати{% endblock %}
+{% block content %}
+<section class="patient-banner"><div><span class="eyebrow">ЛИЧЕН ПАЦИЕНТСКИ ПРОФИЛ</span><h1>Здравейте, {{user.full_name}}</h1><p>Тук ще намерите публикуваните разчитания от Вашите образни изследвания.</p><div class="banner-counter">{{docs|length}} налични документа</div></div><div class="banner-icon" aria-hidden="true">▤</div></section>
+<div class="section-heading docs-title"><div><span class="eyebrow">ДОКУМЕНТИ</span><h2>Моите разчитания</h2><p class="muted">Преглеждайте или изтегляйте PDF файловете от Вашия профил.</p></div></div>
+{% if pdf_av_policy_enabled %}<div class="notice">Документ в проверка за сигурност временно не може да се отвори или изтегли. При нужда се свържете с регистратурата.</div>{% endif %}
+<div class="doc-list">{% for doc in docs %}<article class="doc-card"><div class="doc-symbol">PDF</div><div class="doc-description"><strong>{{doc.modality}} · {{doc.title}}</strong><span>Изследване: {{doc.exam_date.strftime('%d.%m.%Y')}}</span><small>Публикувано: {{doc.published_at.strftime('%d.%m.%Y')}}</small></div><div class="patient-doc-actions"><a class="button secondary" href="/reports/{{doc.id}}/view" target="_blank" rel="noopener noreferrer">◉ Преглед</a><a class="button primary" href="/reports/{{doc.id}}/download">↓ Изтегли PDF</a></div></article>{% else %}<div class="empty-state"><div class="empty-icon">▤</div><h3>Все още няма публикувано разчитане</h3><p>Когато медицинският център публикува документа, той ще се появи тук. При въпроси се свържете с регистратурата.</p></div>{% endfor %}</div>
+<div class="notice patient-notice">Изтегляйте документите само на свое защитено устройство. Разчитането не замества консултацията с лекуващия Ви лекар.</div>
+{% endblock %}
